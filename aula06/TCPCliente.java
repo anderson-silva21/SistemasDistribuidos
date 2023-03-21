@@ -15,6 +15,8 @@ public class TCPCliente {
 
         System.out.println("Cliente");
         System.out.print(">>>");
+
+        try{
         Scanner in = new Scanner(System.in);
         mensagem = in.nextLine();
 
@@ -31,5 +33,6 @@ public class TCPCliente {
         saida.writeBytes(mensagem);
 
         System.out.println(resposta.readLine());
+        }catch(Exception e){}
     }
 }
